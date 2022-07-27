@@ -14,9 +14,9 @@ const TodayForecast: React.FC<any> = ({forecast, location}) => {
         <div className='mb-8'>
             <h1 className='text-7xl font-bold'>{location.name}, <span className='text-xl font-light'>{date}</span></h1>
         </div>
-        <div className='bg-white text-main-blue w-[25rem] lg:w-[40rem] h-[16rem] rounded-lg gap-2 drop-shadow-block-shadow shadow-main-blue'>
+        <div className='bg-white text-main-blue w-[25rem] lg:w-[40rem] h-[17rem] rounded-lg gap-2 '>
             <h2 className='font-bold text-2xl text-center py-6'>Como está o tempo hoje?</h2>
-            <div className='flex flex-row justify-center items-center text-center overflow-scroll gap-2'>
+            <div className='flex flex-row justify-center items-center text-center overflow-x-scroll gap-2'>
                 {forecast.forecastday[0].hour.map((item: any) => (
                 <div className='flex flex-col gap-3 bg-zinc-100 p-4 rounded-lg'>
                     <img src={item.condition.icon} width={40}></img>
