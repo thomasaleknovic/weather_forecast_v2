@@ -4,7 +4,6 @@ import React from 'react'
 const NextDays: React.FC<any> = ({forecast}) => {
 
     const newForecast = forecast.forecastday.slice(1, 3)
-    console.log(newForecast)
     
   return (
     <div className='border-2 rounded-md flex items-center flex-col p-5 mt-6'>
@@ -15,8 +14,9 @@ const NextDays: React.FC<any> = ({forecast}) => {
                 const day = localtime.slice(8,10);
                 const month = localtime.slice(5,7);
                 const date = `${day}/${month}`;
+                console.log(item)
                 
-            return( <div className='flex flex-col items-center bg-[#404040] p-3 rounded-md'>
+            return( <div key={item.date_epoch} className='flex flex-col items-center bg-[#404040] p-3 rounded-md'>
                     <p className='font-bold text-sm mb-5 bg-white py-1 px-4 rounded-full text-[#333333]'>{date}</p>
                         <div className='flex flex-row gap-3'>
                             <div className='flex flex-row gap-4 border-r-2 px-2'>
